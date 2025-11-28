@@ -1,10 +1,9 @@
 var R=require("../../../chunks/[turbopack]_runtime.js")("server/app/api/batches/route.js")
-R.c("server/chunks/13ce0_next_544de421._.js")
-R.c("server/chunks/71d3f_@supabase_realtime-js_dist_module_a9aea366._.js")
-R.c("server/chunks/d2b8d_@supabase_storage-js_dist_module_cef8e710._.js")
-R.c("server/chunks/680da_@supabase_auth-js_dist_module_8517b192._.js")
-R.c("server/chunks/cbcee__pnpm_554e205d._.js")
-R.c("server/chunks/[root-of-the-server]__1fac8cf2._.js")
-R.c("server/chunks/3d319_Guard_website__next-internal_server_app_api_batches_route_actions_775d2ec4.js")
-R.m("[project]/Harvest_Guard/website/node_modules/.pnpm/next@16.0.3_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Harvest_Guard/website/app/api/batches/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
-module.exports=R.m("[project]/Harvest_Guard/website/node_modules/.pnpm/next@16.0.3_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Harvest_Guard/website/app/api/batches/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports
+R.c("server/chunks/275cd_next_86d1b595._.js")
+R.c("server/chunks/f96a7_@supabase_storage-js_dist_module_56124ec0._.js")
+R.c("server/chunks/0f7e6_@supabase_auth-js_dist_module_0a60e3c5._.js")
+R.c("server/chunks/node_modules__pnpm_ce1e9d43._.js")
+R.c("server/chunks/[root-of-the-server]__4b84e500._.js")
+R.c("server/chunks/_next-internal_server_app_api_batches_route_actions_47591f9a.js")
+R.m("[project]/node_modules/.pnpm/next@16.0.3_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/app/api/batches/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/node_modules/.pnpm/next@16.0.3_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/app/api/batches/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports
