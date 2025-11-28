@@ -1,0 +1,856 @@
+[00:00:01.156] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.295] Server  LOG      ✓ Ready in 950ms
+[00:00:11.419] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:11.631] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"en"}
+[00:00:11.631] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"en"}
+[00:00:11.631] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:11.631] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[00:00:11.631] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[00:00:11.631] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312283102}
+[00:00:11.631] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312283102}
+[00:00:12.899] Browser DEBUG   /api/batches GET status: 200
+[00:00:16.537] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:16.690] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:16.690] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:16.690] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:16.690] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312288174}
+[00:00:16.690] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312288174}
+[00:00:17.013] Browser DEBUG   [nav] loaded user from supabase session {"email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman"}
+[00:00:17.322] Browser DEBUG   [nav] loaded user from supabase session {"email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman"}
+[00:00:20.195] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312291678}
+[00:00:20.503] Browser DEBUG   [nav] loaded user from supabase session {"email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman"}
+[00:00:22.129] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312293613}
+[00:00:22.435] Browser DEBUG   [nav] loaded user from supabase session {"email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman"}
+[00:02:08.432] Server  LOG      ✓ Compiled in 104ms
+[00:02:16.805] Server  LOG      ✓ Compiled in 104ms
+[00:04:20.144] Server  LOG      ✓ Compiled in 292ms
+[00:04:21.544] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:22.300] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:04:22.300] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/login","route":"/login"}
+[00:04:22.300] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/login","route":"/login"}
+[00:04:22.300] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312533192}
+[00:04:22.300] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312533192}
+[00:04:22.300] Browser DEBUG   [nav] loaded user from supabase session {"email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman"}
+[00:04:23.310] Browser DEBUG   [nav] loaded user from supabase session {"email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman"}
+[00:04:28.827] Server  LOG      ✓ Compiled in 70ms
+[00:04:29.309] Browser DEBUG   [nav] loaded user from supabase session {"email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman"}
+[00:05:10.664] Server  LOG      ✓ Compiled in 71ms
+[00:05:11.296] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:05:16.303] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:05:52.302] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:05:56.300] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:05:56.300] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:05:57.309] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:05:57.309] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:05:58.297] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:06:27.308] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:06:27.308] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:06:27.308] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:03.382] Server  ERROR    ⨯ ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+
+
+[00:07:03.501] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:04.016] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:04.016] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:04.343] Browser ERROR   uncaughtError: Error: ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+
+
+[00:07:04.523] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:04.523] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:04.523] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:04.523] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:39.120] Server  ERROR    ⨯ ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+
+
+[00:07:39.203] Browser ERROR   uncaughtError: Error: ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+
+
+[00:07:39.354] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:39.354] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:39.354] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:39.354] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:40.263] Server  ERROR    ⨯ ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+
+
+[00:07:40.338] Browser ERROR   uncaughtError: Error: ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+
+
+[00:07:40.448] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:40.448] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:40.448] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:40.448] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:40.774] Server  ERROR    ⨯ ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+
+
+[00:07:40.857] Browser ERROR   uncaughtError: Error: ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+
+
+[00:07:40.998] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:40.998] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:40.998] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:40.998] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:41.744] Server  ERROR    ⨯ ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+
+
+[00:07:41.818] Browser ERROR   uncaughtError: Error: ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+
+
+[00:07:41.959] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:41.959] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:41.959] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:41.959] Browser ERROR   ./Harvest_Guard/website/components/navigation.tsx:108:34
+Parsing ecmascript source code failed
+  106 |               alt={navLabels.brand}
+  107 |                 // fall back to reading from supabase client session if present
+> 108 |                 const supabase = createClient()
+      |                                  ^^^^^^^^^^^^
+  109 |                 const { data, error } = await supabase.auth.getUser()
+  110 |                 if (!error && data?.user) {
+  111 |                   const u = data.user
+
+Expected '</', got 'createClient'
+
+Import trace:
+  Server Component:
+    ./Harvest_Guard/website/components/navigation.tsx
+    ./Harvest_Guard/website/app/layout.tsx
+[00:07:49.476] Server  LOG      ✓ Compiled in 82ms
+[00:07:50.116] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:50.298] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:07:50.298] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:07:50.298] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:07:50.298] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312741782}
+[00:07:50.298] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312741783}
+[00:07:50.684] Browser DEBUG   [nav] loaded user from supabase session {"email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman"}
+[00:07:50.979] Browser DEBUG   [nav] loaded user from supabase session {"email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman"}
+[00:08:03.338] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312754821}
+[00:08:03.649] Browser DEBUG   [nav] loaded user from supabase session {"email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman"}
+[00:08:05.059] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312756534}
+[00:08:05.355] Browser DEBUG   [nav] loaded user from supabase session {"email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman"}
+[00:08:07.473] Browser DEBUG   Calling /api/auth/login
+[00:08:07.883] Server  DEBUG   [api/auth/login] signIn result user id: "f86ac603-766d-458b-ab05-04284999e9e9"
+[00:08:07.993] Browser DEBUG   /api/auth/login response status: 200 body: {"data":{"session":{"access_token":"eyJhbGciOiJIUzI1NiIsImtpZCI6Imd0ZnhLZ2RqbFdhenJidzMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3R0a2F1cnlydXh3Y2FvYmhza29jLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmODZhYzYwMy03NjZkLTQ1OGItYWIwNS0wNDI4NDk5OWU5ZTkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzY0MzE2MzU5LCJpYXQiOjE3NjQzMTI3NTksImVtYWlsIjoiZ2FtaW5nYXNhZDE0QGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWwiOiJnYW1pbmdhc2FkMTRAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJBc2FkIFV6IHphbWFuIiwicGhvbmUiOiIrODgwMTg1NzkxMTQ4MSIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX2xhbmd1YWdlIjoiYm4iLCJzdWIiOiJmODZhYzYwMy03NjZkLTQ1OGItYWIwNS0wNDI4NDk5OWU5ZTkifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc2NDMxMjc1OX1dLCJzZXNzaW9uX2lkIjoiMjljMmYwNDAtNWNlMy00OWY3LWI0OTMtMjRkMTdmYjY1Mzc3IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.tpIj0py--8ryQ0ZeXo6ti9_LJXKmi2FtyoWm5-USxcQ","expires_at":1764316359,"expires_in":3600,"refresh_token":"5hglxqq2gj4c","token_type":"bearer","user":{"app_metadata":{"provider":"email","providers":"[Array]"},"aud":"authenticated","confirmed_at":"2025-11-28T05:25:24.526278Z","created_at":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","email_confirmed_at":"2025-11-28T05:25:24.526278Z","id":"f86ac603-766d-458b-ab05-04284999e9e9","identities":["[Object]"],"is_anonymous":false,"last_sign_in_at":"2025-11-28T06:52:39.965867155Z","phone":"","role":"authenticated","updated_at":"2025-11-28T06:52:39.977625Z","user_metadata":{"email":"gamingasad14@gmail.com","email_verified":true,"name":"Asad Uz zaman","phone":"+8801857911481","phone_verified":false,"preferred_language":"bn","sub":"f86ac603-766d-458b-ab05-04284999e9e9"}},"weak_password":null},"user":{"app_metadata":{"provider":"email","providers":["email"]},"aud":"authenticated","confirmed_at":"2025-11-28T05:25:24.526278Z","created_at":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","email_confirmed_at":"2025-11-28T05:25:24.526278Z","id":"f86ac603-766d-458b-ab05-04284999e9e9","identities":[{"created_at":"2025-11-28T05:25:24.521598Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","identity_data":"[Object]","identity_id":"3000ef34-b6cb-4f91-99bd-aebdfc8a7b2e","last_sign_in_at":"2025-11-28T05:25:24.521549Z","provider":"email","updated_at":"2025-11-28T05:25:24.521598Z","user_id":"f86ac603-766d-458b-ab05-04284999e9e9"}],"is_anonymous":false,"last_sign_in_at":"2025-11-28T06:52:39.965867155Z","phone":"","role":"authenticated","updated_at":"2025-11-28T06:52:39.977625Z","user_metadata":{"email":"gamingasad14@gmail.com","email_verified":true,"name":"Asad Uz zaman","phone":"+8801857911481","phone_verified":false,"preferred_language":"bn","sub":"f86ac603-766d-458b-ab05-04284999e9e9"}}}}
+[00:08:07.993] Browser DEBUG   Setting session on browser supabase client
+[00:08:08.687] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[00:08:08.687] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312760111}
+[00:08:08.687] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[00:08:09.367] Browser DEBUG   /api/batches GET status: 200
+[00:08:10.047] Browser DEBUG   /api/batches GET status: 200
+[00:08:14.782] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312766266}
+[00:08:16.782] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312768257}
+[00:08:19.795] Browser DEBUG   Calling /api/auth/login
+[00:08:20.199] Server  DEBUG   [api/auth/login] signIn result user id: "f86ac603-766d-458b-ab05-04284999e9e9"
+[00:08:20.304] Browser DEBUG   /api/auth/login response status: 200 body: {"data":{"session":{"access_token":"eyJhbGciOiJIUzI1NiIsImtpZCI6Imd0ZnhLZ2RqbFdhenJidzMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3R0a2F1cnlydXh3Y2FvYmhza29jLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmODZhYzYwMy03NjZkLTQ1OGItYWIwNS0wNDI4NDk5OWU5ZTkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzY0MzE2MzcyLCJpYXQiOjE3NjQzMTI3NzIsImVtYWlsIjoiZ2FtaW5nYXNhZDE0QGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWwiOiJnYW1pbmdhc2FkMTRAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJBc2FkIFV6IHphbWFuIiwicGhvbmUiOiIrODgwMTg1NzkxMTQ4MSIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX2xhbmd1YWdlIjoiYm4iLCJzdWIiOiJmODZhYzYwMy03NjZkLTQ1OGItYWIwNS0wNDI4NDk5OWU5ZTkifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc2NDMxMjc3Mn1dLCJzZXNzaW9uX2lkIjoiNTBhN2RmMjItZTY5Ni00YWYxLThjM2MtOGRjZmUyN2UzNDcwIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.3mkCxXYgVAMnQ_-qztMyd3hn8GwD-iIz65tcfmvxyuo","expires_at":1764316372,"expires_in":3600,"refresh_token":"kttufyaarmbw","token_type":"bearer","user":{"app_metadata":{"provider":"email","providers":"[Array]"},"aud":"authenticated","confirmed_at":"2025-11-28T05:25:24.526278Z","created_at":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","email_confirmed_at":"2025-11-28T05:25:24.526278Z","id":"f86ac603-766d-458b-ab05-04284999e9e9","identities":["[Object]"],"is_anonymous":false,"last_sign_in_at":"2025-11-28T06:52:52.286006253Z","phone":"","role":"authenticated","updated_at":"2025-11-28T06:52:52.289025Z","user_metadata":{"email":"gamingasad14@gmail.com","email_verified":true,"name":"Asad Uz zaman","phone":"+8801857911481","phone_verified":false,"preferred_language":"bn","sub":"f86ac603-766d-458b-ab05-04284999e9e9"}},"weak_password":null},"user":{"app_metadata":{"provider":"email","providers":["email"]},"aud":"authenticated","confirmed_at":"2025-11-28T05:25:24.526278Z","created_at":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","email_confirmed_at":"2025-11-28T05:25:24.526278Z","id":"f86ac603-766d-458b-ab05-04284999e9e9","identities":[{"created_at":"2025-11-28T05:25:24.521598Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","identity_data":"[Object]","identity_id":"3000ef34-b6cb-4f91-99bd-aebdfc8a7b2e","last_sign_in_at":"2025-11-28T05:25:24.521549Z","provider":"email","updated_at":"2025-11-28T05:25:24.521598Z","user_id":"f86ac603-766d-458b-ab05-04284999e9e9"}],"is_anonymous":false,"last_sign_in_at":"2025-11-28T06:52:52.286006253Z","phone":"","role":"authenticated","updated_at":"2025-11-28T06:52:52.289025Z","user_metadata":{"email":"gamingasad14@gmail.com","email_verified":true,"name":"Asad Uz zaman","phone":"+8801857911481","phone_verified":false,"preferred_language":"bn","sub":"f86ac603-766d-458b-ab05-04284999e9e9"}}}}
+[00:08:20.304] Browser DEBUG   Setting session on browser supabase client
+[00:08:20.959] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[00:08:20.959] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764312772418}
+[00:08:21.621] Browser DEBUG   /api/batches GET status: 200
+[01:27:46.859] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:27:47.046] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:27:47.046] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:27:47.046] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:27:47.046] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[01:27:47.046] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[01:27:47.046] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317538284}
+[01:27:47.046] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317538285}
+[01:27:48.016] Browser DEBUG   /api/batches GET status: 200
+[01:28:35.433] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:28:35.433] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317586668}
+[01:28:43.736] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/login color: rgb(120, 120, 120) color: inherit {"dp":"/login","o":"http://localhost:3000/login","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317594982}
+[01:28:46.375] Browser DEBUG   Calling /api/auth/login
+[01:28:46.774] Server  DEBUG   [api/auth/login] signIn result user id: "f86ac603-766d-458b-ab05-04284999e9e9"
+[01:28:46.878] Browser DEBUG   /api/auth/login response status: 200 body: {"data":{"session":{"access_token":"eyJhbGciOiJIUzI1NiIsImtpZCI6Imd0ZnhLZ2RqbFdhenJidzMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3R0a2F1cnlydXh3Y2FvYmhza29jLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmODZhYzYwMy03NjZkLTQ1OGItYWIwNS0wNDI4NDk5OWU5ZTkiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzY0MzIxMTk4LCJpYXQiOjE3NjQzMTc1OTgsImVtYWlsIjoiZ2FtaW5nYXNhZDE0QGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWwiOiJnYW1pbmdhc2FkMTRAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJBc2FkIFV6IHphbWFuIiwicGhvbmUiOiIrODgwMTg1NzkxMTQ4MSIsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX2xhbmd1YWdlIjoiYm4iLCJzdWIiOiJmODZhYzYwMy03NjZkLTQ1OGItYWIwNS0wNDI4NDk5OWU5ZTkifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc2NDMxNzU5OH1dLCJzZXNzaW9uX2lkIjoiYzZmOGZmZTEtMzkyZC00YTI2LWFjMjYtNDYyZDE2NWRmMjNlIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.gi1BAGE9D6ve9keQGStEEa_KhltzxgHUfBZHugjpfug","expires_at":1764321198,"expires_in":3600,"refresh_token":"zhegzs5xx44y","token_type":"bearer","user":{"app_metadata":{"provider":"email","providers":"[Array]"},"aud":"authenticated","confirmed_at":"2025-11-28T05:25:24.526278Z","created_at":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","email_confirmed_at":"2025-11-28T05:25:24.526278Z","id":"f86ac603-766d-458b-ab05-04284999e9e9","identities":["[Object]"],"is_anonymous":false,"last_sign_in_at":"2025-11-28T08:13:18.229884497Z","phone":"","role":"authenticated","updated_at":"2025-11-28T08:13:18.235217Z","user_metadata":{"email":"gamingasad14@gmail.com","email_verified":true,"name":"Asad Uz zaman","phone":"+8801857911481","phone_verified":false,"preferred_language":"bn","sub":"f86ac603-766d-458b-ab05-04284999e9e9"}},"weak_password":null},"user":{"app_metadata":{"provider":"email","providers":["email"]},"aud":"authenticated","confirmed_at":"2025-11-28T05:25:24.526278Z","created_at":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","email_confirmed_at":"2025-11-28T05:25:24.526278Z","id":"f86ac603-766d-458b-ab05-04284999e9e9","identities":[{"created_at":"2025-11-28T05:25:24.521598Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","identity_data":"[Object]","identity_id":"3000ef34-b6cb-4f91-99bd-aebdfc8a7b2e","last_sign_in_at":"2025-11-28T05:25:24.521549Z","provider":"email","updated_at":"2025-11-28T05:25:24.521598Z","user_id":"f86ac603-766d-458b-ab05-04284999e9e9"}],"is_anonymous":false,"last_sign_in_at":"2025-11-28T08:13:18.229884497Z","phone":"","role":"authenticated","updated_at":"2025-11-28T08:13:18.235217Z","user_metadata":{"email":"gamingasad14@gmail.com","email_verified":true,"name":"Asad Uz zaman","phone":"+8801857911481","phone_verified":false,"preferred_language":"bn","sub":"f86ac603-766d-458b-ab05-04284999e9e9"}}}}
+[01:28:46.878] Browser DEBUG   Setting session on browser supabase client
+[01:28:47.545] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:28:47.545] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317598778}
+[01:28:48.199] Browser DEBUG   /api/batches GET status: 200
+[01:28:59.216] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:28:59.216] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/weather color: rgb(120, 120, 120) color: inherit {"dp":"/weather","o":"http://localhost:3000/weather","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317610457}
+[01:29:10.841] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:29:10.841] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317622075}
+[01:29:11.462] Browser DEBUG   /api/batches GET status: 200
+[01:29:17.156] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:29:17.156] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/crop-scanner color: rgb(120, 120, 120) color: inherit {"dp":"/crop-scanner","o":"http://localhost:3000/crop-scanner","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317628389}
+[01:29:33.308] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:29:33.308] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317644548}
+[01:29:33.947] Browser DEBUG   /api/batches GET status: 200
+[01:29:37.717] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:29:37.717] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/crop-scanner color: rgb(120, 120, 120) color: inherit {"dp":"/crop-scanner","o":"http://localhost:3000/crop-scanner","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317648962}
+[01:30:05.947] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:30:05.947] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317677184}
+[01:30:07.067] Browser DEBUG   /api/batches GET status: 200
+[01:30:08.130] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:30:08.130] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/weather color: rgb(120, 120, 120) color: inherit {"dp":"/weather","o":"http://localhost:3000/weather","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317679372}
+[01:30:09.735] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:30:09.735] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317680969}
+[01:30:10.393] Browser DEBUG   /api/batches GET status: 200
+[01:30:11.027] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:30:11.027] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/news-articles color: rgb(120, 120, 120) color: inherit {"dp":"/news-articles","o":"http://localhost:3000/news-articles","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317682269}
+[01:30:20.282] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:30:20.282] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/crop-scanner color: rgb(120, 120, 120) color: inherit {"dp":"/crop-scanner","o":"http://localhost:3000/crop-scanner","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317691517}
+[01:30:21.272] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:30:21.272] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/weather color: rgb(120, 120, 120) color: inherit {"dp":"/weather","o":"http://localhost:3000/weather","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317692507}
+[01:30:22.889] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:30:22.889] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/risk-analysis color: rgb(120, 120, 120) color: inherit {"dp":"/risk-analysis","o":"http://localhost:3000/risk-analysis","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317694133}
+[01:30:39.199] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:30:39.200] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764317710430}
+[01:39:04.697] Server  LOG      ✓ Compiled in 100ms
+[01:39:38.266] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:39:38.474] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:39:38.474] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:39:38.474] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:39:38.474] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:39:38.474] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:39:38.474] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764318249723}
+[01:39:38.474] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764318249723}
+[01:41:59.696] Server  LOG      ✓ Compiled in 73ms
+[01:47:50.680] Server  LOG      ✓ Compiled in 69ms
+[01:47:52.425] Server  LOG      ✓ Compiled in 68ms
+[01:55:47.849] Browser DEBUG   [nav] loaded user from localStorage {"createdAt":"2025-11-28T05:25:24.490138Z","email":"gamingasad14@gmail.com","id":"f86ac603-766d-458b-ab05-04284999e9e9","name":"Asad Uz zaman","phone":"+8801857911481","preferredLanguage":"bn"}
+[01:55:47.849] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764319219095}
+[01:55:48.982] Browser DEBUG   /api/batches GET status: 200

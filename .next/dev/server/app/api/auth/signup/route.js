@@ -1,0 +1,10 @@
+var R=require("../../../../chunks/[turbopack]_runtime.js")("server/app/api/auth/signup/route.js")
+R.c("server/chunks/cbcee_next_307b7b9d._.js")
+R.c("server/chunks/8b7e6_@supabase_realtime-js_dist_module_df840549._.js")
+R.c("server/chunks/8b7e6_@supabase_storage-js_dist_module_e14125b9._.js")
+R.c("server/chunks/8b7e6_@supabase_auth-js_dist_module_154c4cab._.js")
+R.c("server/chunks/cbcee_4813ad83._.js")
+R.c("server/chunks/[root-of-the-server]__2f4b6f8b._.js")
+R.c("server/chunks/3d319_Guard_website__next-internal_server_app_api_auth_signup_route_actions_81250307.js")
+R.m("[project]/Harvest_Guard/website/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Harvest_Guard/website/app/api/auth/signup/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/Harvest_Guard/website/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Harvest_Guard/website/app/api/auth/signup/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports
