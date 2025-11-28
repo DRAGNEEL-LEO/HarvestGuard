@@ -1,5 +1,9 @@
 # HarvestGuard — Setup and Development Guide
+Team :<br>
 
+1.Asad Uz Zaman - FrontEnd & Backend<br>
+2.Mohammad Fahim - FrontEnd & Ui <br>
+3.Usaidur Rahman - Ui and design suggestions<br>
 This guide explains how to set up and run the HarvestGuard NextJS project locally, configure Supabase, and prepare for production deployment.
 
 ---
