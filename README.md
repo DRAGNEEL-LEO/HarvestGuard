@@ -1,5 +1,5 @@
-# HarvestGuard — Setup and Development Guide
-Team :<br>
+# HarvestGuard
+<b>Team :</b><br>
 
 1.Asad Uz Zaman - FrontEnd & Backend<br>
 2.Mohammad Fahim - FrontEnd & Ui <br>
