@@ -6,3 +6,4 @@
 # Node/Next generated
 node_modules/
 .next/
+.env.example
