@@ -104,119 +104,94 @@ export function Navigation({ currentPage }: { currentPage?: string }) {
   }, [pathname, language])
 
   return (
-    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] max-w-7xl z-50 bg-background/70 backdrop-blur-md border border-border rounded-2xl shadow-[var(--elev-1)]">
+    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl z-50 bg-background/70 backdrop-blur-md border border-border rounded-2xl shadow-[var(--elev-1)]">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center gap-3 font-bold text-xl">
-            <div className="w-11 h-11 bg-gradient-to-br from-primary to-primary/90 rounded-lg flex items-center justify-center ring-1 ring-primary/10 shadow-sm">
-              <Leaf className="w-6 h-6 text-primary-foreground" />
-            </div>
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 font-bold text-lg flex-shrink-0">
             <img
-              src="/images/harvestguard-wordmark.svg"
-              alt={navLabels.brand}
-              className="h-6 sm:h-8 block"
+              src="/harvestguardlogo1.jpg"
+              alt="Logo"
+              className="w-10 h-10 rounded-lg shadow-sm object-cover"
               onError={(e: any) => {
                 e.currentTarget.style.display = "none"
               }}
             />
-            <span className="sr-only">{navLabels.brand}</span>
+            <img
+              src="/images/harvestguard-wordmark.svg"
+              alt={navLabels.brand}
+              className="h-6 hidden sm:block"
+              onError={(e: any) => {
+                e.currentTarget.style.display = "none"
+              }}
+            />
           </Link>
 
-          <div className="hidden md:flex items-center gap-3">
-            {/* Dashboard dropdown: contains links to all features */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <button className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  currentPage === "dashboard" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted"
-                }`}>
-                  {navLabels.dashboard}
-                </button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem onSelect={() => router.push('/dashboard')}>{navLabels.dashboard}</DropdownMenuItem>
-                <DropdownMenuSeparator />
-                {coreItems.map((item) => (
-                  <DropdownMenuItem key={item.id} onSelect={() => router.push(item.href)}>{item.label}</DropdownMenuItem>
-                ))}
-                <DropdownMenuSeparator />
-                {moreItems.map((it) => (
-                  <DropdownMenuItem key={it.id} onSelect={() => router.push(it.href)}>{it.label}</DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-
+          {/* Desktop Core Nav */}
+          <div className="hidden md:flex items-center gap-1">
+            <Link href="/dashboard" className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${currentPage === "dashboard" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted"}`}>
+              {navLabels.dashboard}
+            </Link>
             {coreItems.map((item) => (
-              <Link
-                key={item.id}
-                href={item.href}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  currentPage === item.id ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted"
-                }`}
-              >
+              <Link key={item.id} href={item.href} className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${currentPage === item.id ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted"}`}>
                 {item.label}
               </Link>
             ))}
-
-            { !currentUser && (
-              <Link href="/register" className="ml-3 px-4 py-2 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-colors shadow-md">
-                {navLabels.get_started || (language === "en" ? "Get Started" : "শুরু করুন")}
-              </Link>
-            )}
           </div>
 
-          <div className="flex items-center gap-3">
+          {/* Right Side Controls */}
+          <div className="flex items-center gap-2">
             {currentUser ? (
-              // Show avatar + dropdown with profile and logout
-              <div className="hidden md:block">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <button className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium bg-muted hover:bg-muted/80">
-                      <Avatar>
-                        {currentUser?.avatarUrl ? (
-                          <AvatarImage src={currentUser.avatarUrl} alt={currentUser.name || currentUser.email} />
-                        ) : (
-                          <AvatarFallback>{(currentUser.name || currentUser.email || 'U')[0]?.toUpperCase()}</AvatarFallback>
-                        )}
-                      </Avatar>
-                      <span className="hidden sm:inline">{currentUser.name || currentUser.email?.split('@')[0]}</span>
-                    </button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-48">
-                    <DropdownMenuLabel>{currentUser.name || currentUser.email}</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem onSelect={() => router.push('/dashboard')}>Profile</DropdownMenuItem>
-                    <DropdownMenuSeparator />
-                    {/* Extra tools moved into profile menu to reduce nav clutter */}
-                    {moreItems.map((it) => (
-                      <DropdownMenuItem key={it.id} onSelect={() => router.push(it.href)}>{it.label}</DropdownMenuItem>
-                    ))}
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem
-                      variant="destructive"
-                      onSelect={async () => {
-                        try {
-                          const supabase = createClient()
-                          await supabase.auth.signOut()
-                        } catch (e) {
-                          // ignore
-                        } finally {
-                          try {
-                            localStorage.removeItem('currentUser')
-                            localStorage.removeItem('farmer')
-                          } catch {}
-                          setCurrentUser(null)
-                          router.push('/')
-                        }
-                      }}
-                    >
-                      Log out
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </div>
+              // User logged in - show profile dropdown
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium bg-muted hover:bg-muted/80 transition-colors">
+                    <Avatar className="w-6 h-6">
+                      {currentUser?.avatarUrl ? (
+                        <AvatarImage src={currentUser.avatarUrl} alt={currentUser.name || currentUser.email} />
+                      ) : (
+                        <AvatarFallback className="text-xs">{(currentUser.name || currentUser.email || 'U')[0]?.toUpperCase()}</AvatarFallback>
+                      )}
+                    </Avatar>
+                    <span className="hidden sm:inline max-w-[100px] truncate">{currentUser.name || currentUser.email?.split('@')[0]}</span>
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-56">
+                  <DropdownMenuLabel>{currentUser.name || currentUser.email}</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onSelect={() => router.push('/dashboard')}>Profile</DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  {/* All features in profile dropdown */}
+                  <DropdownMenuLabel className="text-xs text-muted-foreground">{language === "en" ? "Tools" : "সরঞ্জাম"}</DropdownMenuLabel>
+                  {coreItems.map((item) => (
+                    <DropdownMenuItem key={item.id} onSelect={() => router.push(item.href)}>{item.label}</DropdownMenuItem>
+                  ))}
+                  {moreItems.map((it) => (
+                    <DropdownMenuItem key={it.id} onSelect={() => router.push(it.href)}>{it.label}</DropdownMenuItem>
+                  ))}
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem variant="destructive" onSelect={async () => {
+                    try {
+                      const supabase = createClient()
+                      await supabase.auth.signOut()
+                    } catch (e) {}
+                    finally {
+                      try {
+                        localStorage.removeItem('currentUser')
+                        localStorage.removeItem('farmer')
+                      } catch {}
+                      setCurrentUser(null)
+                      router.push('/')
+                    }
+                  }}>
+                    Log out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             ) : (
-              <Link href="/login" className="hidden md:inline-block px-3 py-2 rounded-lg text-sm font-medium bg-muted hover:bg-muted/80">
-                {navLabels.login}
+              // User not logged in
+              <Link href="/register" className="hidden md:inline-block px-3 py-2 rounded-lg text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">
+                {navLabels.get_started || "Get Started"}
               </Link>
             )}
 
@@ -224,47 +199,38 @@ export function Navigation({ currentPage }: { currentPage?: string }) {
 
             <button
               onClick={() => setLanguage(language === "en" ? "bn" : "en")}
-              className="px-3 py-2 rounded-lg text-sm font-medium bg-muted hover:bg-muted/80 transition-colors"
+              className="px-2 py-2 rounded-lg text-sm font-medium bg-muted hover:bg-muted/80 transition-colors hidden sm:block"
             >
-              {navLabels.langToggle}
+              {language === "en" ? "বাং" : "EN"}
             </button>
 
+            {/* Mobile Menu */}
             <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden p-2 hover:bg-muted rounded-lg">
               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
 
-        
-
+        {/* Mobile Menu */}
         {mobileOpen && (
-          <div className="md:hidden pb-4 space-y-2">
-            <Link href="/dashboard" className="block px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted" onClick={() => setMobileOpen(false)}>
+          <div className="md:hidden pb-4 space-y-1 border-t border-border pt-2">
+            <Link href="/dashboard" className="block px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted" onClick={() => setMobileOpen(false)}>
               {navLabels.dashboard}
             </Link>
             {coreItems.map((item) => (
-              <Link
-                key={item.id}
-                href={item.href}
-                className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors text-muted-foreground hover:bg-muted`}
-                onClick={() => setMobileOpen(false)}
-              >
+              <Link key={item.id} href={item.href} className="block px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted" onClick={() => setMobileOpen(false)}>
                 {item.label}
               </Link>
             ))}
-            {/* Additional features available under Dashboard */}
-            <div className="border-t border-border/50 pt-2">
+            <div className="border-t border-border my-2 pt-2">
               {moreItems.map((it) => (
-                <Link key={it.id} href={it.href} className="block px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted" onClick={() => setMobileOpen(false)}>
+                <Link key={it.id} href={it.href} className="block px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted" onClick={() => setMobileOpen(false)}>
                   {it.label}
                 </Link>
               ))}
             </div>
             {currentUser ? (
               <>
-                <Link href="/dashboard" className="block px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted" onClick={() => setMobileOpen(false)}>
-                  {currentUser.name || currentUser.email?.split('@')[0] || navLabels.dashboard}
-                </Link>
                 <button
                   onClick={async () => {
                     try {
@@ -279,16 +245,22 @@ export function Navigation({ currentPage }: { currentPage?: string }) {
                     setCurrentUser(null)
                     router.push('/')
                   }}
-                  className="w-full text-left block px-4 py-2 rounded-lg text-sm text-destructive hover:bg-destructive/10"
+                  className="w-full text-left block px-3 py-2 rounded-lg text-sm text-destructive hover:bg-destructive/10"
                 >
                   Log out
                 </button>
               </>
             ) : (
-              <Link href="/login" className="block px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted" onClick={() => setMobileOpen(false)}>
+              <Link href="/login" className="block px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted" onClick={() => setMobileOpen(false)}>
                 {navLabels.login}
               </Link>
             )}
+            <button
+              onClick={() => setLanguage(language === "en" ? "bn" : "en")}
+              className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted"
+            >
+              {language === "en" ? "বাংলা" : "English"}
+            </button>
           </div>
         )}
       </div>

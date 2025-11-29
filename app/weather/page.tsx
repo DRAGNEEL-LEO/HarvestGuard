@@ -110,11 +110,9 @@ export default function WeatherPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-blue-900 to-slate-900 relative">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-blue-900 to-slate-900 relative" style={{backgroundImage: 'url(/weather.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', backgroundBlendMode: 'overlay'}}>
       {/* Background Image */}
-      <div className="fixed inset-0 -z-10 opacity-5">
-        <img src="/farmers-working-in-rice-field-harvest.jpg" alt="Background" className="w-full h-full object-cover" />
-      </div>
+      <div className="fixed inset-0 -z-10 opacity-30 bg-gradient-to-b from-slate-900/80 via-blue-900/80 to-slate-900/80 backdrop-blur-md"></div>
 
       {/* Header */}
       <header className="bg-gradient-to-r from-slate-900/80 to-blue-900/80 backdrop-blur-md border-b border-blue-400/20 shadow-lg">

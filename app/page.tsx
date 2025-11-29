@@ -56,7 +56,17 @@ export default function LandingPage() {
 
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div
+      className="min-h-screen text-foreground relative"
+      style={{
+        backgroundImage: "url('/background13.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      {/* Background overlay + blur for readability */}
+      <div className="fixed inset-0 -z-10 bg-black/50 backdrop-blur-lg" />
       {/* Hero Section - modern two-column layout */}
       <section className="pt-24 pb-12 px-6 lg:py-28">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 items-center">
@@ -104,7 +114,7 @@ export default function LandingPage() {
           <div className="lg:col-span-5 order-1 lg:order-2">
             <div className="w-full rounded-3xl overflow-hidden shadow-2xl border border-border bg-gradient-to-br from-primary/8 to-accent/6 transition-smooth transform-gpu hover:scale-[1.01]">
               <div className="relative w-full h-96">
-                <img src="/images/FARMER.jpg" alt="Hero illustration" className="w-full h-full object-cover" />
+                <img src="/homepage.jpeg" alt="Hero illustration" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/6 to-transparent mix-blend-overlay" />
               </div>
             </div>
@@ -241,7 +251,7 @@ export default function LandingPage() {
 
           <div className="flex items-center justify-center gap-8 mt-6">
             <div className="opacity-80 grayscale"> <img src="/images/whatsapp-20image-202025-11-27-20at-2012.jpeg" alt="trust 1" className="h-10" /> </div>
-            <div className="opacity-80 grayscale"> <img src="/images/harvestguard-wordmark.svg" alt="trust 2" className="h-8" /> </div>
+            <div className="opacity-80 grayscale"> <img src="/logo.jprg.jpg" alt="trust 2" className="h-8" /> </div>
             <div className="opacity-80 grayscale"> <img src="/images/whatsapp-20image-202025-11-27-20at-2012.jpeg" alt="trust 3" className="h-10" /> </div>
           </div>
         </div>
