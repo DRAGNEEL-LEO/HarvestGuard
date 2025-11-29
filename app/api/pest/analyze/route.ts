@@ -82,12 +82,28 @@ Analyze the crop carefully for common agricultural pests like insects, diseases,
     })
 
     if (!geminiResponse.ok) {
-      const errorData = await geminiResponse.json()
+      let errorData = {}
+      try {
+        errorData = await geminiResponse.json()
+      } catch (e) {
+        errorData = { message: 'Failed to read error body from Gemini' }
+      }
       console.error("[api/pest/analyze] Gemini API error:", errorData)
-      return NextResponse.json(
-        { error: "Failed to analyze image with Gemini", details: errorData },
-        { status: 500 }
-      )
+
+      // Fallback: return a safe mock analysis so the UI remains functional
+      const fallbackAnalysis: PestAnalysisResponse = {
+        pestName: "Unknown",
+        pestNameBangla: "অজানা",
+        riskLevel: "Low",
+        riskLevelBangla: "কম",
+        description: "Gemini API returned an error. Unable to analyze image right now.",
+        descriptionBangla: "Gemini API ত্রুটি => ইমেজ বিশ্লেষণ করা যাচ্ছে না।",
+        treatmentPlan: "Keep the crop under observation and try again later.",
+        treatmentPlanBangla: "ফসল পর্যবেক্ষণ করুন এবং পরে আবার চেষ্টা করুন।",
+        confidence: 0,
+      }
+
+      return NextResponse.json({ data: fallbackAnalysis, warning: 'Gemini API error', details: errorData })
     }
 
     const geminiData = await geminiResponse.json()
@@ -117,6 +133,20 @@ Analyze the crop carefully for common agricultural pests like insects, diseases,
     return NextResponse.json({ data: analysis })
   } catch (err) {
     console.error("[api/pest/analyze] Error:", err)
-    return NextResponse.json({ error: (err as Error).message }, { status: 500 })
+
+    // On network/DNS or unexpected errors, return a safe fallback so UI doesn't break.
+    const fallbackAnalysis: PestAnalysisResponse = {
+      pestName: "Unknown",
+      pestNameBangla: "অজানা",
+      riskLevel: "Low",
+      riskLevelBangla: "কম",
+      description: "Unable to reach Gemini service. Please check your network or API key.",
+      descriptionBangla: "Gemini সার্ভিসে পৌঁছায়নি। নেটওয়ার্ক বা API কী পরীক্ষা করুন।",
+      treatmentPlan: "Keep the crop under observation and try again later.",
+      treatmentPlanBangla: "ফসল পর্যবেক্ষণ করুন এবং পরে আবার চেষ্টা করুন।",
+      confidence: 0,
+    }
+
+    return NextResponse.json({ data: fallbackAnalysis, error: (err as Error).message })
   }
 }
