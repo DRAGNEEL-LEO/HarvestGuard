@@ -35,11 +35,12 @@ export async function POST(req: NextRequest) {
     }
 
     // Call Gemini Vision API
-    const geminiResponse = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent", {
+    const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${geminiApiKey}`
+    console.log("[api/pest/analyze] Calling Gemini:", geminiUrl.substring(0, 80) + "...")
+    const geminiResponse = await fetch(geminiUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-goog-api-key": geminiApiKey,
       },
       body: JSON.stringify({
         contents: [
@@ -88,7 +89,7 @@ Analyze the crop carefully for common agricultural pests like insects, diseases,
       } catch (e) {
         errorData = { message: 'Failed to read error body from Gemini' }
       }
-      console.error("[api/pest/analyze] Gemini API error:", errorData)
+      console.error("[api/pest/analyze] Gemini API error (status:", geminiResponse.status, "):", errorData)
 
       // Fallback: return a safe mock analysis so the UI remains functional
       const fallbackAnalysis: PestAnalysisResponse = {
