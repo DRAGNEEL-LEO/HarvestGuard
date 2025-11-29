@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { ArrowRight, Shield, TrendingUp, Zap, BarChart3, Leaf, Cloud, Play } from "lucide-react"
-import { DemoModal } from "@/components/demo-modal"
 import { useLanguage } from "@/components/language-provider"
 import { BANGLADESH_CROPS } from "@/lib/crops"
 import { i18n } from "@/lib/i18n"
@@ -11,7 +10,6 @@ import { i18n } from "@/lib/i18n"
 export default function LandingPage() {
   const { language } = useLanguage()
   const [currentUser, setCurrentUser] = useState<any | null>(null)
-  const [showDemoModal, setShowDemoModal] = useState(false)
   const [news, setNews] = useState<any[]>([])
   const [newsLoading, setNewsLoading] = useState(true)
   const [newsError, setNewsError] = useState("")
@@ -55,10 +53,7 @@ export default function LandingPage() {
     }
   }, [language])
 
-  const handleDemoLogin = async () => {
-    // lightweight fallback: navigate to dashboard for demo users
-    window.location.href = "/dashboard"
-  }
+
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -89,9 +84,7 @@ export default function LandingPage() {
                     {t.hero_cta}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
-                  <button onClick={() => setShowDemoModal(true)} className="px-5 py-3 border border-primary rounded-lg text-primary hover:bg-primary/5 transition-smooth hover:-translate-y-0.5">
-                    {t.hero_secondary}
-                  </button>
+                  
                 </>
               )}
             </div>
@@ -366,12 +359,7 @@ export default function LandingPage() {
         </div>
       </footer>
 
-      <DemoModal
-        isOpen={showDemoModal}
-        onClose={() => setShowDemoModal(false)}
-        onDemoLogin={handleDemoLogin}
-        language={language}
-      />
+      
     </div>
   )
 }

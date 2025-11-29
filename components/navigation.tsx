@@ -28,10 +28,20 @@ export function Navigation({ currentPage }: { currentPage?: string }) {
   const router = useRouter()
 
   const navLabels = i18n[language].nav
-  const navItems = [
+
+  // Core features that should remain visible in the top nav
+  const coreItems = [
     { href: "/weather", label: navLabels.weather, id: "weather" },
-    { href: "/risk-analysis", label: navLabels.risk, id: "risk" },
+    { href: "/smart-alerts", label: language === "en" ? "Smart Alerts" : "স্মার্ট সতর্কতা", id: "smart-alerts" },
+    { href: "/risk-map", label: language === "en" ? "Risk Map" : "ঝুঁকি মানচিত্র", id: "risk-map" },
     { href: "/crop-scanner", label: navLabels.scanner, id: "scanner" },
+  ]
+
+  // Additional features (kept reachable under Dashboard dropdown and profile menu)
+  const moreItems = [
+    { href: "/risk-analysis", label: navLabels.risk, id: "risk" },
+    { href: "/pest-detection", label: language === "en" ? "Pest ID" : "কীটপতঙ্গ", id: "pest-detection" },
+    { href: "/voice-assistant", label: language === "en" ? "Voice" : "ভয়েস", id: "voice-assistant" },
     { href: "/news-articles", label: i18n[language].news?.latest || "News", id: "news" },
   ]
 
@@ -113,15 +123,29 @@ export function Navigation({ currentPage }: { currentPage?: string }) {
           </Link>
 
           <div className="hidden md:flex items-center gap-3">
-            <Link
-              href="/dashboard"
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                currentPage === "dashboard" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted"
-              }`}
-            >
-              {navLabels.dashboard}
-            </Link>
-            {navItems.map((item) => (
+            {/* Dashboard dropdown: contains links to all features */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  currentPage === "dashboard" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted"
+                }`}>
+                  {navLabels.dashboard}
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem onSelect={() => router.push('/dashboard')}>{navLabels.dashboard}</DropdownMenuItem>
+                <DropdownMenuSeparator />
+                {coreItems.map((item) => (
+                  <DropdownMenuItem key={item.id} onSelect={() => router.push(item.href)}>{item.label}</DropdownMenuItem>
+                ))}
+                <DropdownMenuSeparator />
+                {moreItems.map((it) => (
+                  <DropdownMenuItem key={it.id} onSelect={() => router.push(it.href)}>{it.label}</DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {coreItems.map((item) => (
               <Link
                 key={item.id}
                 href={item.href}
@@ -161,6 +185,11 @@ export function Navigation({ currentPage }: { currentPage?: string }) {
                     <DropdownMenuLabel>{currentUser.name || currentUser.email}</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem onSelect={() => router.push('/dashboard')}>Profile</DropdownMenuItem>
+                    <DropdownMenuSeparator />
+                    {/* Extra tools moved into profile menu to reduce nav clutter */}
+                    {moreItems.map((it) => (
+                      <DropdownMenuItem key={it.id} onSelect={() => router.push(it.href)}>{it.label}</DropdownMenuItem>
+                    ))}
                     <DropdownMenuSeparator />
                     <DropdownMenuItem
                       variant="destructive"
@@ -206,12 +235,14 @@ export function Navigation({ currentPage }: { currentPage?: string }) {
           </div>
         </div>
 
+        
+
         {mobileOpen && (
           <div className="md:hidden pb-4 space-y-2">
             <Link href="/dashboard" className="block px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted" onClick={() => setMobileOpen(false)}>
               {navLabels.dashboard}
             </Link>
-            {navItems.map((item) => (
+            {coreItems.map((item) => (
               <Link
                 key={item.id}
                 href={item.href}
@@ -221,6 +252,14 @@ export function Navigation({ currentPage }: { currentPage?: string }) {
                 {item.label}
               </Link>
             ))}
+            {/* Additional features available under Dashboard */}
+            <div className="border-t border-border/50 pt-2">
+              {moreItems.map((it) => (
+                <Link key={it.id} href={it.href} className="block px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted" onClick={() => setMobileOpen(false)}>
+                  {it.label}
+                </Link>
+              ))}
+            </div>
             {currentUser ? (
               <>
                 <Link href="/dashboard" className="block px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted" onClick={() => setMobileOpen(false)}>

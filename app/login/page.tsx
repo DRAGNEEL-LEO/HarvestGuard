@@ -29,8 +29,6 @@ export default function LoginPage() {
       sign_in: "Sign In",
       no_account: "Don't have an account?",
       register: "Register here",
-      demo_mode: "Demo Mode",
-      demo_button: "Try Demo Account",
       signing_in: "Signing in...",
     },
     bn: {
@@ -43,8 +41,6 @@ export default function LoginPage() {
       sign_in: "সাইন ইন করুন",
       no_account: "অ্যাকাউন্ট নেই?",
       register: "এখানে রেজিস্টার করুন",
-      demo_mode: "ডেমো মোড",
-      demo_button: "ডেমো অ্যাকাউন্ট চেষ্টা করুন",
       signing_in: "সাইন ইন হচ্ছে...",
     },
   }
@@ -183,66 +179,7 @@ export default function LoginPage() {
     }
   }
 
-  const handleDemoLogin = async () => {
-    setError("")
-    setIsLoading(true)
-    
-    try {
-      // Diagnostic: log supabase URL for demo login attempts
-      // eslint-disable-next-line no-console
-      console.debug("Supabase URL (demo):", process.env.NEXT_PUBLIC_SUPABASE_URL)
-      const { data, error: authError } = await supabase.auth.signInWithPassword({
-        email: "demo@harvestguard.com",
-        password: "demo123456",
-      })
-
-      if (authError) {
-        setError(
-          language === "en"
-            ? "Demo account not available. Please register first."
-            : "ডেমো অ্যাকাউন্ট উপলব্ধ নয়। প্রথমে রেজিস্টার করুন।",
-        )
-        return
-      }
-
-      if (data?.user) {
-        // Normalize and persist user locally (same as regular login flow)
-        try {
-          const rawUser = data.user
-          const normalized = {
-            id: rawUser.id,
-            name: rawUser.user_metadata?.name ?? rawUser.name ?? rawUser.email?.split('@')[0],
-            email: rawUser.email,
-            phone: rawUser.user_metadata?.phone ?? rawUser.phone ?? '',
-            preferredLanguage:
-              rawUser.user_metadata?.preferred_language ?? rawUser.user_metadata?.preferredLanguage ?? localStorage.getItem('selectedLanguage') ?? 'en',
-            createdAt: rawUser.created_at ?? rawUser.confirmed_at ?? null,
-          }
-
-          localStorage.setItem('currentUser', JSON.stringify(normalized))
-          localStorage.setItem('farmer', JSON.stringify(normalized))
-        } catch (e) {
-          // ignore storage errors
-        }
-
-        router.push("/dashboard")
-      }
-    } catch (err) {
-      // Provide a clearer message for network-level failures such as "Load failed"
-      const message = err instanceof Error ? err.message : "An error occurred"
-      if (message === "Load failed" || message.includes("Failed to fetch") || message.includes("NetworkError")) {
-        setError(
-          language === "en"
-            ? "Network error: failed to reach Supabase. Check your NEXT_PUBLIC_SUPABASE_URL and internet connection."
-            : "নেটওয়ার্ক ত্রুটি: Supabase-এ পৌঁছানো যায়নি। আপনার NEXT_PUBLIC_SUPABASE_URL এবং ইন্টারনেট সংযোগ পরীক্ষা করুন।",
-        )
-      } else {
-        setError(message)
-      }
-    } finally {
-      setIsLoading(false)
-    }
-  }
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5 py-12 px-4 sm:px-6 lg:px-8">
@@ -345,16 +282,7 @@ export default function LoginPage() {
           </button>
         </div>
 
-        <div className="mb-6">
-          <p className="text-center text-sm text-muted-foreground mb-3">{t.demo_mode}</p>
-          <button
-            onClick={handleDemoLogin}
-            disabled={isLoading}
-            className="w-full border-2 border-primary text-primary py-3 rounded-lg font-semibold hover:bg-primary/5 transition-colors disabled:opacity-50"
-          >
-            {t.demo_button}
-          </button>
-        </div>
+        
 
         <p className="text-center text-muted-foreground">
           {t.no_account}{" "}
