@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import { Leaf, AlertTriangle, CheckCircle } from "lucide-react"
+import { Leaf, AlertTriangle, CheckCircle, Trash2 } from "lucide-react"
 import { useWeather } from '@/hooks/use-weather'
 import { formatFloat } from '@/lib/utils'
 
@@ -21,9 +21,10 @@ interface CropBatch {
 interface Props {
   batches: CropBatch[]
   language: "en" | "bn"
+  onDelete?: (batchId: string) => void
 }
 
-export default function CropBatchList({ batches, language }: Props) {
+export default function CropBatchList({ batches, language, onDelete }: Props) {
   const content = {
     en: {
       status_active: "Active",
@@ -34,6 +35,10 @@ export default function CropBatchList({ batches, language }: Props) {
       harvest: "Harvest Date",
       loss_events: "Loss Events",
       success_rate: "Success Rate",
+      delete: "Delete",
+      confirm_delete: "Are you sure you want to delete this crop batch?",
+      delete_confirm_title: "Delete Batch",
+      cancel: "Cancel",
     },
     bn: {
       status_active: "সক্রিয়",
@@ -44,10 +49,15 @@ export default function CropBatchList({ batches, language }: Props) {
       harvest: "ফসল কাটার তারিখ",
       loss_events: "ক্ষতির ঘটনা",
       success_rate: "সাফল্যের হার",
+      delete: "মুছুন",
+      confirm_delete: "আপনি কি এই ফসলের ব্যাচ মুছতে চান?",
+      delete_confirm_title: "ব্যাচ মুছুন",
+      cancel: "বাতিল",
     },
   }
 
   const t = content[language]
+  const [deleteConfirm, setDeleteConfirm] = React.useState<string | null>(null)
 
   const activeBatches = batches.filter((b) => b.status === "active")
   const completedBatches = batches.filter((b) => b.status === "completed")
@@ -121,6 +131,8 @@ export default function CropBatchList({ batches, language }: Props) {
 
   const renderBatchCard = (batch: CropBatch) => {
     const computed = computeRiskForBatch(batch)
+    const isDeleteConfirm = deleteConfirm === batch.id
+
     return (
     <div
       key={batch.id}
@@ -134,14 +146,47 @@ export default function CropBatchList({ batches, language }: Props) {
             <p className="text-sm text-muted-foreground">ID: {batch.id}</p>
           </div>
         </div>
-        <span
-          className={`px-3 py-1 rounded-full text-sm font-semibold ${
-            batch.status === "active" ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-700"
-          }`}
-        >
-          {batch.status === "active" ? t.status_active : t.status_completed}
-        </span>
+        <div className="flex items-center gap-2">
+          <span
+            className={`px-3 py-1 rounded-full text-sm font-semibold ${
+              batch.status === "active" ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-700"
+            }`}
+          >
+            {batch.status === "active" ? t.status_active : t.status_completed}
+          </span>
+          <button
+            onClick={() => setDeleteConfirm(isDeleteConfirm ? null : batch.id)}
+            className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+            title={t.delete}
+          >
+            <Trash2 className="w-5 h-5" />
+          </button>
+        </div>
       </div>
+
+      {/* Delete Confirmation Dialog */}
+      {isDeleteConfirm && (
+        <div className="mb-4 p-4 border border-red-300 bg-red-50 rounded-lg">
+          <p className="text-sm text-red-700 font-semibold mb-3">{t.confirm_delete}</p>
+          <div className="flex gap-2">
+            <button
+              onClick={() => {
+                if (onDelete) onDelete(batch.id)
+                setDeleteConfirm(null)
+              }}
+              className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm font-medium"
+            >
+              {t.delete}
+            </button>
+            <button
+              onClick={() => setDeleteConfirm(null)}
+              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors text-sm font-medium"
+            >
+              {t.cancel}
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className="grid grid-cols-2 gap-4 mb-4">
         <div>

@@ -83,89 +83,66 @@ export default function RiskAnalysisPage() {
     }
   }, [])
 
-  // Calculate risk based on batch and mock weather data
-  const calculateRisk = (batchId: string) => {
+  // Calculate risk using Gemini API
+  const calculateRisk = async (batchId: string) => {
     const batch = batches.find((b) => b.id === batchId)
     if (!batch) return
 
     setLoading(true)
 
-    // Simulate risk calculation with random factors
-    setTimeout(() => {
-      const moistureLevel = 55 + Math.random() * 30
-      const temperatureLevel = 25 + Math.random() * 10
-      const daysInStorage = Math.floor((Date.now() - new Date(batch.createdAt).getTime()) / (1000 * 60 * 60 * 24))
+    try {
+      const response = await fetch("/api/risk/analyze", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          batchId,
+          cropType: batch.cropType,
+          estimatedWeight: batch.estimatedWeight,
+          storageLocation: batch.storageLocation,
+          storageType: batch.storageType,
+          createdAt: batch.createdAt,
+        }),
+      })
 
-      // ETCL calculation logic
-      let etcl = 72 // default
-      let riskLevel: "low" | "medium" | "high" | "critical" = "low"
-      let afflatoxinRisk = false
-
-      if (moistureLevel > 75 && temperatureLevel > 30) {
-        etcl = 24 + Math.random() * 24 // High risk: 24-48 hours
-        riskLevel = "critical"
-        afflatoxinRisk = true
-      } else if (moistureLevel > 70 || temperatureLevel > 28) {
-        etcl = 48 + Math.random() * 48 // Medium-high risk: 48-96 hours
-        riskLevel = "high"
-        afflatoxinRisk = Math.random() > 0.5
-      } else if (moistureLevel > 65 || temperatureLevel > 25) {
-        etcl = 72 + Math.random() * 72 // Medium risk: 72-144 hours
-        riskLevel = "medium"
-        afflatoxinRisk = false
-      } else {
-        etcl = 144 + Math.random() * 168 // Low risk: 144+ hours
-        riskLevel = "low"
-        afflatoxinRisk = false
+      if (!response.ok) {
+        const error = await response.json()
+        throw new Error(error.error || "Failed to analyze risk")
       }
 
-      const etclLabel =
-        etcl < 24
-          ? language === "en"
-            ? "Critical - Less than 1 day"
-            : "সংকটজনক - ১ দিনের কম"
-          : etcl < 48
-            ? language === "en"
-              ? "High - 1-2 days"
-              : "উচ্চ - ১-২ দিন"
-            : etcl < 96
-              ? language === "en"
-                ? "Medium - 2-4 days"
-                : "মাধ্যম - ২-৪ দিন"
-              : language === "en"
-                ? "Low - 4+ days"
-                : "কম - ৪+ দিন"
+      const apiResult = await response.json()
+      const riskAnalysis = apiResult.data
 
-      let recommendation = ""
-      let recommendationBn = ""
-
-      if (afflatoxinRisk) {
-        recommendation = `High Risk of Aflatoxin Mold (ETCL: ${Math.round(etcl)} hours). Weather forecast suggests high humidity, requiring immediate indoor aeration. Check storage and increase ventilation immediately.`
-        recommendationBn = `আফ্লাটক্সিন ছত্রাকের উচ্চ ঝুঁকি (ETCL: ${Math.round(etcl)} ঘন্টা)। আবহাওয়ার পূর্বাভাস উচ্চ আর্দ্রতা প্রস্তাব করে, তাৎক্ষণিক অভ্যন্তরীণ বায়ু চলাচল প্রয়োজন। অবিলম্বে সংরক্ষণ পরীক্ষা করুন এবং বায়ু চলাচল বাড়ান।`
-      } else if (riskLevel === "high") {
-        recommendation = `High Risk of moisture damage detected. Moisture: ${Math.round(moistureLevel)}%. Implement aeration schedule and monitor daily for early signs of mold.`
-        recommendationBn = `আর্দ্রতা ক্ষতির উচ্চ ঝুঁকি সনাক্ত করা হয়েছে। আর্দ্রতা: ${Math.round(moistureLevel)}%। বায়ু চলাচলের সময়সূচী প্রয়োগ করুন এবং ছত্রাকের প্রাথমিক লক্ষণের জন্য দৈনিক পর্যবেক্ষণ করুন।`
-      } else if (riskLevel === "medium") {
-        recommendation = `Moderate risk detected. Maintain regular monitoring schedule. Current conditions: Moisture ${Math.round(moistureLevel)}%, Temperature ${Math.round(temperatureLevel)}°C. Schedule weekly inspections.`
-        recommendationBn = `মাঝারি ঝুঁকি সনাক্ত করা হয়েছে। নিয়মিত পর্যবেক্ষণ সময়সূচী বজায় রাখুন। বর্তমান অবস্থা: আর্দ্রতা ${Math.round(moistureLevel)}%, তাপমাত্রা ${Math.round(temperatureLevel)}°C। সাপ্তাহিক পরিদর্শন নির্ধারণ করুন।`
-      } else {
-        recommendation = `Low risk detected. Conditions are favorable. Continue regular monitoring and maintain proper storage practices.`
-        recommendationBn = `কম ঝুঁকি সনাক্ত করা হয়েছে। অবস্থা অনুকূল। নিয়মিত পর্যবেক্ষণ চালিয়ে যান এবং সঠিক সংরক্ষণ অনুশীলন বজায় রাখুন।`
+      // Convert etclLabel to localized version if needed
+      let etclLabel = riskAnalysis.etclLabel
+      if (language === "bn") {
+        if (riskAnalysis.etcl < 24) {
+          etclLabel = "সংকটজনক - ১ দিনের কম"
+        } else if (riskAnalysis.etcl < 48) {
+          etclLabel = "উচ্চ - ১-২ দিন"
+        } else if (riskAnalysis.etcl < 96) {
+          etclLabel = "মাধ্যম - ২-৪ দিন"
+        } else {
+          etclLabel = "কম - ৪+ দিন"
+        }
       }
 
       setRiskData({
         batchId,
-        riskLevel,
-        etcl,
+        riskLevel: riskAnalysis.riskLevel,
+        etcl: riskAnalysis.etcl,
         etclLabel,
-        afflatoxinRisk,
-        moistureLevel,
-        temperatureLevel,
-        recommendation,
-        recommendationBn,
+        afflatoxinRisk: riskAnalysis.afflatoxinRisk,
+        moistureLevel: riskAnalysis.moistureLevel,
+        temperatureLevel: riskAnalysis.temperatureLevel,
+        recommendation: riskAnalysis.recommendation,
+        recommendationBn: riskAnalysis.recommendationBn,
       })
       setLoading(false)
-    }, 1000)
+    } catch (error) {
+      console.error("Error analyzing risk:", error)
+      alert(language === "en" ? "Failed to analyze risk" : "ঝুঁকি বিশ্লেষণ ব্যর্থ হয়েছে")
+      setLoading(false)
+    }
   }
 
   const handleAnalyze = () => {

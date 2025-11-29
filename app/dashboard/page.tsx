@@ -289,6 +289,25 @@ export default function DashboardPage() {
     downloadFile(csvContent, "harvest-guard-crops.csv", "text/csv")
   }
 
+  const handleDeleteBatch = async (batchId: string) => {
+    // Remove from state
+    setCropBatches((s) => s.filter((b) => b.id !== batchId))
+
+    // If user is logged in, also delete from server
+    if (farmer) {
+      try {
+        const supabase = createClient()
+        const { error } = await supabase.from("crop_batches").delete().eq("id", batchId)
+        if (error) {
+          console.warn("Failed to delete batch from server:", error)
+          // Could optionally re-add to state here if deletion fails
+        }
+      } catch (e) {
+        console.warn("Error deleting batch from server:", e)
+      }
+    }
+  }
+
   const convertToCSV = (batches: CropBatch[]) => {
     const headers = [
       "Batch ID",
@@ -491,7 +510,7 @@ export default function DashboardPage() {
                     </button>
                   </div>
                 ) : (
-                  <CropBatchList batches={cropBatches} language={language} />
+                  <CropBatchList batches={cropBatches} language={language} onDelete={handleDeleteBatch} />
                 )}
               </>
             )}

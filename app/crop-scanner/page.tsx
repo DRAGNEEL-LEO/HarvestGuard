@@ -155,48 +155,73 @@ export default function CropScannerPage() {
 
     setAnalyzing(true)
 
-    // Simulate AI analysis with delay
-    setTimeout(() => {
-      // Mock analysis - in production, this would call an ML API
-      const isHealthy = Math.random() > 0.4
-      const confidence = 75 + Math.random() * 20
-      const severity = isHealthy ? "low" : Math.random() > 0.5 ? "medium" : "high"
+    try {
+      // Convert image to base64
+      const reader = new FileReader()
+      reader.onload = async () => {
+        const base64Image = reader.result as string
 
-      const mockResult: ScanAnalysis = {
-        status: isHealthy ? "fresh" : "rotten",
-        confidence: Math.round(confidence),
-        details: isHealthy
-          ? language === "en"
-            ? "Crop appears healthy with good color and texture. No visible signs of decay or disease detected."
-            : "ফসন স্বাস্থ্যকর দেখাচ্ছে ভালো রঙ এবং টেক্সচার সহ। কোনো দৃশ্যমান ক্ষয় বা রোগের লক্ষণ নেই।"
-          : language === "en"
-            ? "Crop shows signs of deterioration. Possible mold growth and moisture damage detected. Immediate action recommended."
-            : "ফসন অবনতির লক্ষণ দেখাচ্ছে। সম্ভাব্য ছত্রাক বৃদ্ধি এবং আর্দ্রতা ক্ষতি সনাক্ত করা হয়েছে। তাৎক্ষণিক পদক্ষেপ সুপারিশ করা হয়।",
-        detailsBn: "",
-        recommendations: isHealthy
-          ? [
-              language === "en" ? "Continue regular monitoring" : "নিয়মিত পর্যবেক্ষণ চালিয়ে যান",
-              language === "en" ? "Maintain current storage conditions" : "বর্তমান সংরক্ষণ অবস্থা বজায় রাখুন",
-              language === "en" ? "Schedule weekly inspections" : "সাপ্তাহিক পরিদর্শন নির্ধারণ করুন",
-            ]
-          : [
-              language === "en" ? "Increase ventilation immediately" : "অবিলম্বে বায়ু চলাচল বাড়ান",
-              language === "en" ? "Check entire batch for similar issues" : "সম্পূর্ণ ব্যাচে অনুরূপ সমস্যা পরীক্ষা করুন",
-              language === "en" ? "Consider applying fungicide treatment" : "ছত্রাকনাশক চিকিত্সা প্রয়োগ বিবেচনা করুন",
-            ],
-        recommendationsBn: [],
-        diseaseDetected: isHealthy
-          ? []
-          : ["Possible Aflatoxin Mold", "Moisture Damage", "Early Fungal Growth"].slice(
-              0,
-              Math.floor(Math.random() * 3) + 1,
-            ),
-        severity,
+        // Call Gemini API via our backend
+        const response = await fetch("/api/pest/analyze", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            imageBase64: base64Image,
+          }),
+        })
+
+        if (!response.ok) {
+          const error = await response.json()
+          throw new Error(error.error || "Failed to analyze image")
+        }
+
+        const apiResult = await response.json()
+        const pestAnalysis = apiResult.data
+
+        // Transform Gemini response to our ScanAnalysis format
+        const isHealthy = pestAnalysis.pestName === "No pest detected"
+        const riskLevelMap: { [key: string]: "low" | "medium" | "high" } = {
+          Low: "low",
+          Medium: "medium",
+          High: "high",
+          Critical: "high",
+        }
+
+        const result: ScanAnalysis = {
+          status: isHealthy ? "fresh" : "rotten",
+          confidence: Math.round((pestAnalysis.confidence || 0.85) * 100),
+          details: isHealthy
+            ? language === "en"
+              ? "Crop appears healthy. No pests or diseases detected."
+              : "ফসন স্বাস্থ্যকর দেখাচ্ছে। কোনো কীটপতঙ্গ বা রোগ সনাক্ত করা হয়নি।"
+            : language === "en"
+              ? pestAnalysis.description
+              : pestAnalysis.descriptionBangla,
+          detailsBn: language === "bn" ? pestAnalysis.descriptionBangla : "",
+          recommendations: isHealthy
+            ? [
+                language === "en" ? "Continue regular monitoring" : "নিয়মিত পর্যবেক্ষণ চালিয়ে যান",
+                language === "en" ? "Maintain current storage conditions" : "বর্তমান সংরক্ষণ অবস্থা বজায় রাখুন",
+                language === "en" ? "Schedule weekly inspections" : "সাপ্তাহিক পরিদর্শন নির্ধারণ করুন",
+              ]
+            : (language === "en" ? pestAnalysis.treatmentPlan : pestAnalysis.treatmentPlanBangla)
+                .split("\n")
+                .filter((line: string) => line.trim())
+                .slice(0, 3),
+          recommendationsBn: [],
+          diseaseDetected: isHealthy ? [] : [pestAnalysis.pestName],
+          severity: riskLevelMap[pestAnalysis.riskLevel] || "medium",
+        }
+
+        setResult(result)
+        setAnalyzing(false)
       }
-
-      setResult(mockResult)
+      reader.readAsDataURL(imageFile)
+    } catch (error) {
+      console.error("Error analyzing crop:", error)
+      alert(language === "en" ? "Failed to analyze image" : "ছবি বিশ্লেষণ ব্যর্থ হয়েছে")
       setAnalyzing(false)
-    }, 2000)
+    }
   }
 
   return (

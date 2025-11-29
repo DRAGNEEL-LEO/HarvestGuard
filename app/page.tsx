@@ -138,8 +138,13 @@ export default function LandingPage() {
         </div>
       </section>
       {/* Problem Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-transparent to-primary/5">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-6 relative" style={{
+        backgroundImage: "url('/background13.jpg')",
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+      }}>
+        <div className="absolute inset-0 -z-10 bg-black/50 backdrop-blur-lg" />
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <p className="text-primary font-semibold text-sm mb-2">{t.problem_intro}</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -166,8 +171,13 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 px-6 relative" style={{
+        backgroundImage: "url('/background13.jpg')",
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+      }}>
+        <div className="absolute inset-0 -z-10 bg-black/50 backdrop-blur-lg" />
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">{t.features_title}</h2>
             <p className="text-xl text-muted-foreground">{t.features_subtitle}</p>
@@ -206,8 +216,13 @@ export default function LandingPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 px-6 bg-gradient-to-b from-transparent to-accent/5">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-6 relative" style={{
+        backgroundImage: "url('/background13.jpg')",
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+      }}>
+        <div className="absolute inset-0 -z-10 bg-black/50 backdrop-blur-lg" />
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.how_title}</h2>
             <p className="text-muted-foreground">{t.features_heading}</p>
@@ -242,8 +257,13 @@ export default function LandingPage() {
       </section>
 
       {/* Testimonials & Trust */}
-      <section className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-16 px-6 relative" style={{
+        backgroundImage: "url('/background13.jpg')",
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+      }}>
+        <div className="absolute inset-0 -z-10 bg-black/50 backdrop-blur-lg" />
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-semibold mb-2">{t.testimonial_1_text}</h3>
             <div className="text-sm text-muted-foreground">{t.testimonial_1_author}</div>
@@ -258,8 +278,13 @@ export default function LandingPage() {
       </section>
 
       {/* Getting Started Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-transparent to-accent/5">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-6 relative" style={{
+        backgroundImage: "url('/background13.jpg')",
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+      }}>
+        <div className="absolute inset-0 -z-10 bg-black/50 backdrop-blur-lg" />
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.getting_started.title}</h2>
             <p className="text-muted-foreground">{language === 'en' ? 'A quick guide to start using HarvestGuard' : 'HarvestGuard ব্যবহার শুরু করার সংক্ষিপ্ত নির্দেশিকা'}</p>
@@ -294,8 +319,13 @@ export default function LandingPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-24 px-6 relative" style={{
+        backgroundImage: "url('/background13.jpg')",
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+      }}>
+        <div className="absolute inset-0 -z-10 bg-black/50 backdrop-blur-lg" />
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">{t.cta_title}</h2>
           <Link
             href="/register"
@@ -308,8 +338,13 @@ export default function LandingPage() {
       </section>
 
       {/* News Section (moved to end of page) */}
-      <section className="py-20 px-6 bg-background">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-6 relative" style={{
+        backgroundImage: "url('/background13.jpg')",
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+      }}>
+        <div className="absolute inset-0 -z-10 bg-black/50 backdrop-blur-lg" />
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{i18n[language].news.latest}</h2>
             <p className="text-muted-foreground">{i18n[language].news.latest_sub}</p>
@@ -356,8 +391,13 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-12 px-6 bg-muted/50">
-        <div className="max-w-6xl mx-auto">
+      <footer className="border-t border-border py-12 px-6 relative" style={{
+        backgroundImage: "url('/background13.jpg')",
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+      }}>
+        <div className="absolute inset-0 -z-10 bg-black/50 backdrop-blur-lg" />
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex items-center gap-2 mb-6">
             <img src="/images/whatsapp-20image-202025-11-27-20at-2012.jpeg" alt="Logo" className="w-6 h-6" />
             <span className="font-semibold">{t.nav}</span>
