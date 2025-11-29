@@ -7,7 +7,6 @@ import Link from "next/link"
 import { ArrowLeft, MapPin } from "lucide-react"
 import dynamic from "next/dynamic"
 import L from "leaflet"
-import 'leaflet/dist/leaflet.css'
 
 // Dynamically import Leaflet components to avoid SSR issues
 const MapContainer = dynamic(
