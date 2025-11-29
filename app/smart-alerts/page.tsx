@@ -171,7 +171,7 @@ export default function SmartAlertsPage() {
         <div className="mt-8 p-4 rounded-lg border border-primary/20 bg-primary/5">
           <p className="text-sm text-muted-foreground">
             {language === "en"
-              ? "Smart Alerts are generated based on your stored crop data (moisture, temperature, storage type, and time). Bad alerts (Critical/High/Medium) describe the situation. Good alerts (Low) include helpful suggestions. Critical alerts trigger SMS notifications."
+              ? "Smart Alerts are generated based on your stored crop data (moisture, temperature, storage type, and time). Bad alerts (Critical/High/Medium) describe the situation. Good alerts (Low) include helpful suggestions."
               : "স্মার্ট সতর্কতা আপনার সংরক্ষিত ফসল ডেটা (আর্দ্রতা, তাপমাত্রা, গুদাম প্রকার এবং সময়) এর উপর ভিত্তি করে তৈরি হয়। খারাপ সতর্কতা (গুরুতর/উচ্চ/মাঝারি) পরিস্থিতি বর্ণনা করে। ভাল সতর্কতা (কম) সহায়ক পরামর্শ অন্তর্ভুক্ত করে।"}
           </p>
         </div>
